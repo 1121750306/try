@@ -1,7 +1,5 @@
 [标题1](#标题1)
-<font color=#00ffff size=72>qvqqv</font>
 # 标题1
-<font color="red">awegawe</font>
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
@@ -168,26 +166,26 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
 #### html8
 
  > flex布局
-<pre><code>
-<i>flex-direction</i>    主轴方向 row,row-reverse,column,column-reverse
 
-<mark>flex-wrap</mark>     是否换行  wrap，nowrap,wrap-reverse
+	flex-direction    主轴方向 row,row-reverse,column,column-reverse
 
-<mark>flex-flow</mark> :<direction> <wrap>
+	flex-wrap     是否换行  wrap，nowrap,wrap-reverse
+
+	flex-flow :<direction> <wrap>
 	
-<mark>justify-content</mark> :主轴对齐方式 flex-start,flex-end,center,space-between,space-around
+	justify-content :主轴对齐方式 flex-start,flex-end,center,space-between,space-around
 
-<mark>align-item</mark> :交叉轴对其方式 flex-start,flex-end,center,baseline,strench(占满)
+	align-item :交叉轴对其方式 flex-start,flex-end,center,baseline,strench(占满)
 
-<mark>align-content</mark> :多跟轴线的对齐方式 属性值同上
+	align-content :多跟轴线的对齐方式 属性值同上
 
-<mark>order</mark> :先后排序，由小到大
+	order :先后排序，由小到大
 
-<mark>flex-grow</mark>  默认0，都不放大。如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍
+	flex-grow  默认0，都不放大。如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍
 
-<mark>flex-shrink</mark>   默认1，空间不足时该项目缩小。如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效
+	flex-shrink   默认1，空间不足时该项目缩小。如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效
 
-<mark>flex</mark> 属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)
+	flex 属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)
 
-<mark>align-self</mark>   自定义当前项目的对齐方式，属性为baseline和strench
-</code></pre>
+	align-self   自定义当前项目的对齐方式，属性为baseline和strench
+
