@@ -1,5 +1,13 @@
 [标题1](#标题1)
 # 标题1
+  ```HTML
+    .item{
+        top: 50%;
+        margin-top: -50px;  /* margin-top值为自身高度的一半 */
+        position: absolute;
+        padding:0;
+    }
+ ```
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
