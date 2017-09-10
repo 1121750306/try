@@ -4,15 +4,10 @@
 # 标题1
 ### 标题3
 
-<ul>
-  <li>#HTML
-    <ul>
-      <li>[display,opacity,visibility](#html1)</li>
-    </ul>
-  </li>
-  <li>#CSS</li>
-  <li>#Javascript</li>
- </li>
+  HTML
+    opacity,display,visibility
+  CSS
+  JAVASCRIPT
  </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br>
  # html1
  
