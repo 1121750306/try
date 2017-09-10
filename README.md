@@ -8,6 +8,7 @@
 	* [渐进增强和优雅降级](#html3)
 	* [link 和 @import 的区别](#html4)
 	* [对position属性的理解](#html5)
+	* [行内元素和块级元素](#html6)
 * JAVASCRIPT
  </br>
 
@@ -83,4 +84,16 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
 
 (7)、sticky 
 对象在常态时遵循常规流。它就像是relative和fixed的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3）
+</code></pre>
+
+#### html6
+
+ > 行内元素和块级元素
+<pre><code>
+ 块级元素可以包含块级元素和行内元素，行内元素只能包含行内元素。
+ 块级元素可以设置宽高，行内元素不能设置宽高。
+ 块级元素的margin和padding四周都有效，行内元素的margin和padding只在水平方向（left和right）有效
+ 
+ 常见块级元素： div  , p  , form,   ul,  li ,  ol, dl,    form,   address,  fieldset,  hr, menu,  table
+ 常见行内元素： span,   strong,   em,  br,  label,  select,  textarea,  cite  （注：img和input属于特殊的行内元素，又叫行内可替代元素）
 </code></pre>
