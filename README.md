@@ -168,7 +168,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  > flex布局
 
 	`flex-direction`    主轴方向 row,row-reverse,column,column-reverse
-
+```
 	`flex-wrap`     是否换行  wrap，nowrap,wrap-reverse
 
 	`flex-flow` :<direction> <wrap>
