@@ -112,7 +112,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left:-50% 来实现水平居中
  </code></pre>
  
-  > 垂直居中
+ > 垂直居中
  <pre><code>
  单行文本使用height和line-height实现。
  
