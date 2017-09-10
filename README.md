@@ -1,5 +1,8 @@
 [标题1](#标题1)
 # 标题1
+```Java
+public static void main(String[]args){} //Java
+```
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
