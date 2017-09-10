@@ -1,11 +1,5 @@
 [标题1](#标题1)
 # 标题1
-
-	display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在
-
-#
-	display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在
-
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
@@ -118,13 +112,12 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  </code></pre>
  
  > 垂直居中
- <pre><code>
- 单行文本使用height和line-height实现。
+ 	单行文本使用height和line-height实现。
  
- vertical-align：middle。只在父元素为th和td有效。
+	 vertical-align：middle。只在父元素为th和td有效。
  
-  垂直居中：多行的行内元素解决方案
-  组合使用display:table-cell和vertical-align:middle属性来定义需要居中的元素的父容器元素生成效果，如下：</code>
+ 	 垂直居中：多行的行内元素解决方案
+  	组合使用display:table-cell和vertical-align:middle属性来定义需要居中的元素的父容器元素生成效果，如下：
   ```css
     .parent {
       background: #222;
@@ -136,8 +129,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
       vertical-align:middle;
     }
   ```
-<code>
-  垂直居中：已知高度的块状元素解决方案
+ 	 垂直居中：已知高度的块状元素解决方案
   ```css
     .item{
         top: 50%;
@@ -146,8 +138,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
         padding:0;
     }
  ```
- </code></pre>
-
+#
  > 水平垂直居中
  
  <pre><code>
