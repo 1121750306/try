@@ -193,11 +193,8 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  > box-sizing属性
  
  ```css
- content-box(W3C模型)
- 	Width = width + padding-left + padding-right + border-left + border-right
- padding-box
- 	Width = width(包含padding-left + padding-right) + border-top + border-bottom
- border-box(IE)
- 	Width = width(包含padding-left + padding-right + border-left + border-right)
+ content-box (W3C模型)    Width = width + padding-left + padding-right + border-left + border-right
+ padding-box      Width = width(包含padding-left + padding-right) + border-top + border-bottom
+ border-box (IE)     Width = width(包含padding-left + padding-right + border-left + border-right)
  
  ```
