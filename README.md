@@ -9,6 +9,7 @@
 	* [link 和 @import 的区别](#html4)
 	* [对position属性的理解](#html5)
 	* [行内元素和块级元素](#html6)
+	* [水平居中，垂直居中，水平垂直居中](#html6)
 * JAVASCRIPT
  </br>
 
@@ -97,3 +98,26 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  常见块级元素： div , p , form , ul , li , ol , dl , form , address , fieldset , hr , menu , table
  常见行内元素： span, strong , em , br , label , select , textarea , cite （注：img和input属于特殊的行内元素，又叫行内可替代元素）
 </code></pre>
+
+#### html7
+
+ > 水平居中
+ <pre><code>
+ 变为inline或者inline-block，给其父元素text-align:center。
+ 
+ 定宽和块级元素，使用margin：0 auto。
+ 
+ 使用flex布局。
+ 
+ 通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left:-50% 来实现水平居中
+ </code></pre>
+  > 水平居中
+ <pre><code>
+ 变为inline或者inline-block，给其父元素text-align:center。
+ 
+ 定宽和块级元素，使用margin：0 auto。
+ 
+ 使用flex布局。
+ 
+ 通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left:-50% 来实现水平居中
+ </code></pre>
