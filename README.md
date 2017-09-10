@@ -1,8 +1,5 @@
 [标题1](#标题1)
 # 标题1
-```Java
-public static void main(String[]args){} //Java
-```
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
@@ -134,14 +131,14 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
 
 
   垂直居中：已知高度的块状元素解决方案
-  ` ``CSS
+  ```CSS
     .item{
         top: 50%;
         margin-top: -50px;  /* margin-top值为自身高度的一半 */
         position: absolute;
         padding:0;
     }
- ` ``
+ ```
  </code></pre>
 
  > 水平垂直居中
