@@ -59,6 +59,7 @@
 #### html5
 
  > 对position的理解
+ 
  <code>
   position：static | relative | absolute | fixed | center | page | sticky
   默认值：static，center、page、sticky是CSS3中新增加的值。
