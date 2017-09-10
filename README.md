@@ -1,5 +1,13 @@
 [标题1](#标题1)
 # 标题1
+```css
+   .item{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  /* 使用css3的transform来实现 */
+   }
+   ```
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
