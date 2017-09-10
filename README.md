@@ -61,8 +61,8 @@
  > 对position的理解
  
  <code>
-  position：static | relative | absolute | fixed | center | page | sticky
-  默认值：static，center、page、sticky是CSS3中新增加的值。
+ position：static | relative | absolute | fixed | center | page | sticky
+ 默认值：static，center、page、sticky是CSS3中新增加的值。
 (1)、static 
 可以认为静态的，默认元素都是静态的定位，对象遵循常规流。此时4个定位偏移属性不会被应用，也就是使用left，right，bottom，top将不会生效。
 
