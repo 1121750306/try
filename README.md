@@ -59,7 +59,6 @@
 #### html5
 
  > 对position的理解
- 
  <pre>
  <code>
  position：static | relative | absolute | fixed | center | page | sticky
