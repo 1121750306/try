@@ -1,22 +1,11 @@
 [标题1](#标题1)
 # 标题1
-```css
-   .item{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);  /* 使用css3的transform来实现 */
-   }
-   ```
-   
-   ```css
-   .item{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);  /* 使用css3的transform来实现 */
-   }
-   ```
+
+	display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在
+
+
+	display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在
+
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
