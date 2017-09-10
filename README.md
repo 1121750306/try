@@ -118,25 +118,25 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  
  	 垂直居中：多行的行内元素解决方案
   	组合使用display:table-cell和vertical-align:middle属性来定义需要居中的元素的父容器元素生成效果，如下：
-  ```css
-    .parent {
-      background: #222;
-      width: 300px;
-      height: 300px;
+ 	 ```css
+  	  .parent {
+   	   background: #222;
+   	   width: 300px;
+    	  height: 300px;
       
-      /* 以下属性垂直居中 */
-      display: table-cell;
-      vertical-align:middle;
-    }
-  ```
+   	   /* 以下属性垂直居中 */
+    	  display: table-cell;
+    	  vertical-align:middle;
+   	 }
+ 	 ```
  	 垂直居中：已知高度的块状元素解决方案
-  ```css
-    .item{
-        top: 50%;
-        margin-top: -50px;  /* margin-top值为自身高度的一半 */
-        position: absolute;
-        padding:0;
-    }
+	  ```css
+ 	   .item{
+      	  top: 50%;
+      	  margin-top: -50px;  /* margin-top值为自身高度的一半 */
+      	  position: absolute;
+      	  padding:0;
+   	 }
  ```
 #
  > 水平垂直居中
