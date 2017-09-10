@@ -1,6 +1,6 @@
 
 	组合使用display:table-cell和vertical-align:middle属性来定义需要居中的元素的父容器元素生成效果，如下：
- 	 ```css
+	```css
   	  .parent {
    	   background: #222;
    	   width: 300px;
@@ -10,16 +10,16 @@
     	  display: table-cell;
     	  vertical-align:middle;
    	 }
- 	 ```
+	```
  	 垂直居中：已知高度的块状元素解决方案
-	  ```css
+	```css
  	   .item{
       	  top: 50%;
       	  margin-top: -50px;  /* margin-top值为自身高度的一半 */
       	  position: absolute;
       	  padding:0;
    	 }
-	 ```
+	```
 [标题1](#标题1)
 # 标题1
 * HTML和CSS
