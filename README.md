@@ -59,8 +59,7 @@
 #### html5
 
  > 对position的理解
- <pre>
- <code>
+ <pre><code>
  position：static | relative | absolute | fixed | center | page | sticky
  默认值：static，center、page、sticky是CSS3中新增加的值。
 (1)、static 
@@ -84,5 +83,4 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
 
 (7)、sticky 
 对象在常态时遵循常规流。它就像是relative和fixed的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3）
-</code>
-</pre>
+</code></pre>
