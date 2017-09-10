@@ -11,6 +11,7 @@
 	* [flex布局](#html8)
 	* [box-sizing属性](#html9)
 	* [CSS选择器](#html10)
+	* [哪些属性可以继承](#html11)
 * JAVASCRIPT
  </br>
 
@@ -220,4 +221,22 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
     8.属性选择器（a[rel = "external"]）
 
     9.伪类选择器（a: hover, li:nth-child）
+ ```
+
+#### html11
+ > 那些属性可以继承
+ ```css
+  不可继承的：
+    display、margin、border、padding、background、height、min-height、max-height、width、min-width、max-width、overflow、position、left、right、top、bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、page-bread-before和unicode-bidi
+
+  所有元素可继承：visibility和cursor
+
+  内联元素可继承：
+    letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction
+
+  终端块状元素可继承：text-indent和text-align
+
+  列表元素可继承：list-style、list-style-type、list-style-position、list-style-image
+
+  表格元素可继承：border-collapse
  ```
