@@ -9,6 +9,7 @@
 	* [行内元素和块级元素](#html6)
 	* [水平居中，垂直居中，水平垂直居中](#html7)
 	* [flex布局](#html8)
+	* [box-sizing属性](#html9)
 * JAVASCRIPT
  </br>
 
@@ -162,9 +163,9 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  ```
 
 #### html8
-```css
- > flex布局
 
+ > flex布局
+```css
 	`flex-direction`    主轴方向 row,row-reverse,column,column-reverse
 
 	`flex-wrap`     是否换行  wrap，nowrap,wrap-reverse
@@ -187,3 +188,10 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
 
 	`align-self`   自定义当前项目的对齐方式，属性为baseline和strench
 ```
+
+#### html9
+ > box-sizing属性
+ 
+ ```css
+ content-box:Width = width + padding-left + padding-right + border-left + border-right
+ ```
