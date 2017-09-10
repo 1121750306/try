@@ -1,13 +1,5 @@
 [标题1](#标题1)
 # 标题1
-```css
-    .item{
-        top: 50%;
-        margin-top: -50px;  /* margin-top值为自身高度的一半 */
-        position: absolute;
-        padding:0;
-    }
-    ```
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
@@ -127,6 +119,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  
   垂直居中：多行的行内元素解决方案
   组合使用display:table-cell和vertical-align:middle属性来定义需要居中的元素的父容器元素生成效果，如下：
+  ```css
     .parent {
       background: #222;
       width: 300px;
@@ -136,10 +129,10 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
       display: table-cell;
       vertical-align:middle;
     }
-
+  ```
 
   垂直居中：已知高度的块状元素解决方案
-  ```CSS
+  ```css
     .item{
         top: 50%;
         margin-top: -50px;  /* margin-top值为自身高度的一半 */
@@ -153,13 +146,14 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  
  <pre><code>
  水平垂直居中：未知高度和宽度元素解决方案
+ ```css
    .item{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);  /* 使用css3的transform来实现 */
    }
- 
+ ```
  使用flex
    .parent{
         display: flex;
@@ -177,7 +171,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  > flex布局
 
 	`flex-direction`    主轴方向 row,row-reverse,column,column-reverse
-```
+
 	`flex-wrap`     是否换行  wrap，nowrap,wrap-reverse
 
 	`flex-flow` :<direction> <wrap>
