@@ -10,6 +10,7 @@
 	* [水平居中，垂直居中，水平垂直居中](#html7)
 	* [flex布局](#html8)
 	* [box-sizing属性](#html9)
+	* [CSS选择器](#html10)
 * JAVASCRIPT
  </br>
 
@@ -193,8 +194,30 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  > box-sizing属性
  
  ```css
- content-box (W3C模型)    Width = width + padding-left + padding-right + border-left + border-right
- padding-box            Width = width(包含padding-left + padding-right) + border-top + border-bottom
- border-box (IE)       Width = width(包含padding-left + padding-right + border-left + border-right)
+ content-box (W3C模型)   Width = width + padding-left + padding-right + border-left + border-right
+ padding-box             Width = width(包含padding-left + padding-right) + border-top + border-bottom
+ border-box (IE)         Width = width(包含padding-left + padding-right + border-left + border-right)
  
+ ```
+
+#### html10
+ > CSS选择器
+ ```css
+    1.id选择器（ # myid）
+
+    2.类选择器（.myclassname）
+
+    3.标签选择器（div, h1, p）
+
+    4.相邻选择器（h1 + p）
+
+    5.子选择器（ul > li）
+
+    6.后代选择器（li a）
+
+    7.通配符选择器（ * ）
+
+    8.属性选择器（a[rel = "external"]）
+
+    9.伪类选择器（a: hover, li:nth-child）
  ```
