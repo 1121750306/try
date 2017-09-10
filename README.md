@@ -94,6 +94,6 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  块级元素可以设置宽高，行内元素不能设置宽高。
  块级元素的margin和padding四周都有效，行内元素的margin和padding只在水平方向（left和right）有效
  
- 常见块级元素： div  , p  , form,   ul,  li ,  ol, dl,    form,   address,  fieldset,  hr, menu,  table
- 常见行内元素： span,   strong,   em,  br,  label,  select,  textarea,  cite  （注：img和input属于特殊的行内元素，又叫行内可替代元素）
+ 常见块级元素： div , p , form , ul , li , ol , dl , form , address , fieldset , hr , menu , table
+ 常见行内元素： span, strong , em , br , label , select , textarea , cite （注：img和input属于特殊的行内元素，又叫行内可替代元素）
 </code></pre>
