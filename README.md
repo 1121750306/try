@@ -12,6 +12,7 @@
 	* [box-sizing属性](#html9)
 	* [CSS选择器](#html10)
 	* [哪些属性可以继承](#html11)
+	* [CSS3新增伪类选择器，以及伪类有哪些](#html12)
 * JAVASCRIPT
  </br>
 
@@ -224,7 +225,7 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  ```
 
 #### html11
- > 那些属性可以继承
+ > 哪些属性可以继承
  ```css
   不可继承的：
     display、margin、border、padding、background、height、min-height、max-height、width、min-width、max-width、overflow、position、left、right、top、bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、page-bread-before和unicode-bidi
@@ -239,4 +240,38 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
   列表元素可继承：list-style、list-style-type、list-style-position、list-style-image
 
   表格元素可继承：border-collapse
+ ```
+
+#### html12
+ > CSS3新增选择器
+ ```CSS
+    p:first-of-type 选择属于其父元素的首个 <p> 元素的每个 <p> 元素。
+
+    p:last-of-type  选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+
+    p:only-of-type  选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。
+
+    p:only-child    选择属于其父元素的唯一子元素的每个 <p> 元素。
+
+    p:nth-child(2)  选择属于其父元素的第二个子元素的每个 <p> 元素。
+
+    :enabled  :disabled 控制表单控件的禁用状态。
+
+    :checked        单选框或复选框被选中。
+ ```
+ > 伪类选择器有哪些
+ ```css
+first-child()
+last-child()
+link
+visited
+hover
+active
+focus
+after
+before
+first-letter
+first-line
+lang(language)
+
  ```
