@@ -111,13 +111,32 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
  
  通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left:-50% 来实现水平居中
  </code></pre>
-  > 水平居中
+ 
+  > 垂直居中
  <pre><code>
- 变为inline或者inline-block，给其父元素text-align:center。
+ 单行文本使用height和line-height实现。
  
- 定宽和块级元素，使用margin：0 auto。
+ vertical-align：middle。只在父元素为th和td有效。
  
- 使用flex布局。
+  垂直居中：多行的行内元素解决方案
+    组合使用display:table-cell和vertical-align:middle属性来定义需要居中的元素的父容器元素生成效果，如下：
+    .parent {
+      background: #222;
+      width: 300px;
+      height: 300px;
+      
+      /* 以下属性垂直居中 */
+      display: table-cell;
+      vertical-align:middle;
+    }
+
+
+  垂直居中：已知高度的块状元素解决方案
+    .item{
+        top: 50%;
+        margin-top: -50px;  /* margin-top值为自身高度的一半 */
+        position: absolute;
+        padding:0;
+    }
  
- 通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left:-50% 来实现水平居中
  </code></pre>
