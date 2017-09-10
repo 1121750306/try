@@ -1,6 +1,6 @@
 [标题1](#标题1)
 # 标题1
-<mark color="red">awegawe</mark>
+<mark style="background: red">awegawe</mark>
 * HTML和CSS
 	* [opacity,display,visibility](#html1)
 	* [文字超出用...](#html2)
