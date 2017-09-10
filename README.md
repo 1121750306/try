@@ -131,13 +131,14 @@ b、元素定位参考的是离自身最近的定位祖先元素，要满足两�
 
 
   垂直居中：已知高度的块状元素解决方案
+  ` ``CSS
     .item{
         top: 50%;
         margin-top: -50px;  /* margin-top值为自身高度的一半 */
         position: absolute;
         padding:0;
     }
- 
+ ` ``
  </code></pre>
 
  > 水平垂直居中
