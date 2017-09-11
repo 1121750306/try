@@ -19,6 +19,7 @@
 	* [回流（Reflow）和重绘（Repaint）](#html16)
 	* [浮动造成的结果，以及清除浮动的方法](#html17)
 	* [W3C标准都有什么](#html18)
+	* [对BFC的理解，BFC的触发条件都有哪些](#html19)
 * JAVASCRIPT
 * [常见兼容性问题]
  </br>
@@ -375,7 +376,7 @@ lang(language)
    4. #parent:after{}
    ```
    
-   #### html18
+#### html18
    > W3C标准都有什么
    ```
    要有doctype声明；
@@ -388,4 +389,27 @@ lang(language)
    图片要加alt，form表单应该有对应的label；
    文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，
    容易维护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性。
+   ```
+
+#### html19
+   > 对BFC的理解
+   ```css
+    BFC，块级格式化上下文，一个创建了新的BFC的盒子是独立布局的，盒子里面的子元素的样式不会影响到外面的元素。
+
+    在同一个BFC中的两个毗邻的块级盒在垂直方向（和布局方向有关系）的margin会发生折叠。
+
+    W3C CSS 2.1 规范中的一个概念，它决定了元素如何对其内容进行布局，以及与其他元素的关系和相互作用。
+   ```
+    > 哪些可以触发BFC
+    ```css
+    float: left;
+    overflow: auto;
+    display: table;
+    display: table-cell;
+    display: table-caption;
+    display: inline-block;
+    position: fixed;
+    position: absolute;
+    ……
+   
    ```
