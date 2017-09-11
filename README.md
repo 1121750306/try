@@ -431,6 +431,12 @@ lang(language)
  1. clientWidth和clientHeight，返回该元素的可视宽高，不包括滚动条
  2. scrollWidth和scrollHeight，滚动大小，指的是包含滚动内容的元素大小（元素内容的总高度）
  3. offsetWidth和offsetHeight，返回元素实际大小，包含边框、内边距和滚动条
+ 
+ 在浏览器中的区别在于：
+ IE6、IE7 认为scrollHeight 是网页内容实际高度，可以小于clientHeight。
+ FF、Chrome 认为scrollHeight 是网页内容高度，不过最小值是clientHeight。
+ 
+ 返回视图大小：
  function getViewPort () {
     if(document.compatMode == "BackCompat") {   //浏览器嗅探，混杂模式
         return {
@@ -444,4 +450,24 @@ lang(language)
         };
     }
 }
+返回文档大小：
+function getDocumentPort () {
+    if(document.compatMode == "BackCompat") {
+        return {
+            width: document.body.scrollWidth,
+            height: document.body.scrollHeight
+        };
+    } else {
+        return {
+            width: Math.max(document.documentElement.scrollWidth,document.documentElement.clientWidth),
+            height: Math.max(document.documentElement.scrollHeight,document.documentElement.clientHeight)
+        }
+    }
+}
+ ```
+> 元素周边长度
+ ```javascript
+ 1. clientLeft和clientTop 获取边框大小,返回值即为左边框和上边框宽度
+ 2. offsetLeft和offsetTop 相对于父元素的左上距离
+ 3. scrollTop和scrollLeft 滚动条被卷入的长度，也可以直接赋值使滚动条调到该位置
  ```
