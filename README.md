@@ -423,3 +423,173 @@ lang(language)
    top和bottom是相对于父元素的height
  3.transform:translate(50%,50%)是相对于自身宽高的50%
  ```
+<tbody>
+<tr>
+<td valign="top" width="123">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 浏览器</p>
+<p>&nbsp;</p>
+<p>属性</p>
+</td>
+<td valign="top" width="161">
+<p>Firefox/Chrome/Safari</p>
+<p>(带&lt;!DOCTYPE&gt;声明)</p>
+</td>
+<td valign="top" width="161">
+<p>Firefox/Chrome/Safari</p>
+<p>(不带&lt;!DOCTYPE&gt;声明)</p>
+</td>
+<td valign="top" width="166">
+<p>IE 6/7/8/9</p>
+<p>&nbsp;(带&lt;!DOCTYPE&gt;声明)</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8/9</p>
+<p>(不带&lt;!DOCTYPE&gt;声明)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="123">
+<p>window.innerWidth/innerHeight</p>
+</td>
+<td valign="top" width="161">
+<p>窗口显示区（可视区域）的宽度和高度，包括滚动条区域</p>
+</td>
+<td valign="top" width="161">
+<p>窗口显示区（可视区域）的宽度和高度，包括滚动条区域</p>
+</td>
+<td valign="top" width="166">
+<p>IE 6/7/8</p>
+<p>Undefined</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>同Firefox</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8</p>
+<p>Undefined</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>同Firefox</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="123">
+<p>document.documentElement.clientWidth/clientHeight</p>
+</td>
+<td valign="top" width="161">
+<p>窗口显示区（可视区域）的宽度和高度，<strong>不</strong>包括滚动条区域</p>
+</td>
+<td valign="top" width="161">
+<p>&lt;html&gt;元素的宽度和高度（注意包括了不可见的区域）</p>
+</td>
+<td valign="top" width="166">
+<p>IE 6/7/8/9</p>
+<p>窗口显示区（可视区域）的宽度和高度，<strong>不</strong>包括滚动条区域</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8</p>
+<p>总为0</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>窗口显示区（可视区域）的宽度和高度，<strong>不</strong>包括滚动条区域</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="123">
+<p>document.body.clientWidth/clientHeight</p>
+</td>
+<td valign="top" width="161">
+<p>&lt;body&gt;元素的宽度和高度（注意，包括了不可见的区域）</p>
+</td>
+<td valign="top" width="161">
+<p>窗口显示区（可视区域）的宽度和高度，<strong>不</strong>包括滚动条区域</p>
+</td>
+<td valign="top" width="166">
+<p>&lt;body&gt;元素的宽度和高度（注意，它包括了不可见的区域）</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8</p>
+<p>窗口显示区（可视区域）的宽度和高度，<strong>不</strong>包括滚动条区域）</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>&lt;body&gt;元素的宽度和高度（注意，它包括了不可见的区域）</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="123">
+<p>window.pageXOffset/pageYOffset</p>
+</td>
+<td valign="top" width="161">
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离</p>
+</td>
+<td valign="top" width="161">
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离</p>
+</td>
+<td valign="top" width="166">
+<p>IE 6/7/8</p>
+<p>Undefined</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>同Firefox</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8</p>
+<p>Undefined</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>同Firefox</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="123">
+<p>document.documentElement.scrollTop/scrollLeft</p>
+</td>
+<td valign="top" width="161">
+<p>Firefox：</p>
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离，同window.pageXOffset/pageYOffset</p>
+<p>&nbsp;</p>
+<p>Chrome/Safari：</p>
+<p>总为0</p>
+</td>
+<td valign="top" width="161">
+<p>总为0</p>
+</td>
+<td valign="top" width="166">
+<p>IE 6/7/8/9</p>
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8</p>
+<p>总为0</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="123">
+<p>document.body.scrollTop/scrollLeft</p>
+</td>
+<td valign="top" width="161">
+<p>FireFox：</p>
+<p>总为0</p>
+<p>&nbsp;</p>
+<p>Chrome/Safari：</p>
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离，同window.pageXOffset/pageYOffset</p>
+</td>
+<td valign="top" width="161">
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离，同window.pageXOffset/pageYOffset</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="166">
+<p>总为0</p>
+</td>
+<td valign="top" width="174">
+<p>IE 6/7/8</p>
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离</p>
+<p>&nbsp;</p>
+<p>IE 9</p>
+<p>当前页面相对于窗口显示区左上角的 X /Y位置，即水平/垂直滚动条已滚动的距离</p>
+</td>
+</tr>
+</tbody>
