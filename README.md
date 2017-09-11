@@ -402,7 +402,7 @@ lang(language)
    ```
    
  > 哪些可以触发BFC
-    ```css
+ ```css
     float: left;
     overflow: auto;
     display: table;
@@ -412,4 +412,4 @@ lang(language)
     position: fixed;
     position: absolute;
     ……
-    ```
+ ```
