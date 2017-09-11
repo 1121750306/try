@@ -20,6 +20,7 @@
 	* [浮动造成的结果，以及清除浮动的方法](#html17)
 	* [W3C标准都有什么](#html18)
 	* [对BFC的理解，BFC的触发条件都有哪些](#html19)
+	* [部分属性的百分比，是相对于什么的](#html20)
 * JAVASCRIPT
 * [常见兼容性问题]
  </br>
@@ -412,4 +413,13 @@ lang(language)
     position: fixed;
     position: absolute;
     ……
+ ```
+
+#### html20
+ > 部分属性的百分比，是相对于什么的
+ ```css
+ 1.margin 和padding 都是相对于块级父元素的width
+ 2.设置了定位，在left和right有效的情况下相对于父元素的width  ；
+   top和bottom是相对于父元素的height
+ 3.transform:translate(50%,50%)是相对于自身宽高的50%
  ```
