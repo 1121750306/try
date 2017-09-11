@@ -401,7 +401,7 @@ lang(language)
     W3C CSS 2.1 规范中的一个概念，它决定了元素如何对其内容进行布局，以及与其他元素的关系和相互作用。
    ```
    
-    > 哪些可以触发BFC
+ > 哪些可以触发BFC
     ```css
     float: left;
     overflow: auto;
