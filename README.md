@@ -973,5 +973,6 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
 
    会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念
    
-   https://segmentfault.com/a/1190000000652891
+   url(https://segmentfault.com/a/1190000000652891)
+   url("https://segmentfault.com/a/1190000000652891")
 ```
