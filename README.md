@@ -24,6 +24,7 @@
 	* [窗口和元素的各种宽高距离](#html21)
 	* [HTML5新增标签](#html22)
 	* [多条注释判断浏览器版本](#html23)
+	* [Web Worker , Web Socket](#html24)
 * JAVASCRIPT
 * [常见兼容性问题]
  </br>
@@ -546,4 +547,24 @@ data- 为H5新增的为前端开发者提供自定义的属性，这些属性集
 <!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
 <!--[if IE 8]> 仅IE8可识别 <![endif]-->
 <!--[if IE 9]> 仅IE9可识别 <![endif]-->
+```
+
+#### html24
+ > Web Worker
+```html
+    1.通过 worker = new Worker( url ) 加载一个JS文件来创建一个worker，同时返回一个worker实例。
+
+    2.通过worker.postMessage( data ) 方法来向worker发送数据。
+
+    3.绑定worker.onmessage方法来接收worker发送过来的数据。
+
+    4.可以使用 worker.terminate() 来终止一个worker的执行。
+```
+ > Web Socket
+```html
+  Web Socket 是 Web 应用程序的传输协议，它提供了双向的，按序到达的数据流。
+
+  他是一个 HTML5 协议， WebSocket 的连接是持久的，他通过在客户端和服务器之间保持双工连接，
+
+  服务器的更新可以被及时推送给客户端，而不需要客户端以一定时间间隔去轮询。
 ```
