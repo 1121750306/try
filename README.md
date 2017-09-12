@@ -868,7 +868,7 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
     arr[arr.length] = "fourth";可直接在数组末尾添加一项
     检测是否是数组的通用办法：Array.isArray(arr);
 
-  2.var arr = ["first","second","third"];
+  2. var arr = ["first","second","third"];
     alert(arr.toString());
     alert(arr.valueOf());
     alert(arr);三个的输出结果都是first,second,third;
