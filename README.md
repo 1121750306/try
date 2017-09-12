@@ -23,6 +23,7 @@
 	* [部分属性的百分比，是相对于什么的](#html20)
 	* [窗口和元素的各种宽高距离](#html21)
 	* [HTML5新增标签](#html22)
+	* [多条注释判断浏览器版本]（#html23）
 * JAVASCRIPT
 * [常见兼容性问题]
  </br>
@@ -524,4 +525,19 @@ function getDocumentPort () {
     纯表现的元素：basefont，big，center，font, s，strike，tt，u；
 
     对可用性产生负面影响的元素：frame，frameset，noframes；
+```
+
+#### html23
+ > 多条注释判断浏览器版本IE
+```HTML
+<!--[if !IE]><!--> 除IE外都可识别 <!--<![endif]-->
+<!--[if IE]> 所有的IE可识别 <![endif]-->
+<!--[if IE 6]> 仅IE6可识别 <![endif]-->
+<!--[if lt IE 6]> IE6以及IE6以下版本可识别 <![endif]-->
+<!--[if gte IE 6]> IE6以及IE6以上版本可识别 <![endif]-->
+<!--[if IE 7]> 仅IE7可识别 <![endif]-->
+<!--[if lt IE 7]> IE7以及IE7以下版本可识别 <![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
+<!--[if IE 8]> 仅IE8可识别 <![endif]-->
+<!--[if IE 9]> 仅IE9可识别 <![endif]-->
 ```
