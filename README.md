@@ -474,7 +474,7 @@ function getDocumentPort () {
  ```
  
 #### html22
-```html
+```css
 一丶结构标签
   （1）section：独立内容区块，可以用h1~h6组成大纲，表示文档结构，也可以有章节、页眉、页脚或页眉的其他部分；
   （2）article：特殊独立区块，表示这篇页眉中的核心内容；
@@ -519,4 +519,9 @@ function getDocumentPort () {
    （6）canvas：使用JS代码做内容进行图像绘制；
    （7）command：按钮；
    （8）deteils ：展开菜单；
+	
+六丶移除的标签
+    纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+
+    对可用性产生负面影响的元素：frame，frameset，noframes；
 ```
