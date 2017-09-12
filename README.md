@@ -25,6 +25,8 @@
 	* [HTML5新增标签](#html22)
 	* [多条注释判断浏览器版本](#html23)
 	* [Web Worker , Web Socket](#html24)
+	* [web storage和cookie的区别](#html25)
+	* [cookie的优缺点](#html26)
 * JAVASCRIPT
 * [常见兼容性问题]
  </br>
@@ -577,4 +579,57 @@ data- 为H5新增的为前端开发者提供自定义的属性，这些属性集
 　　　　2、onerror 当网络发生错误时触发该事件
 　　　　3、onclose 当websocket被关闭时触发该事件
 　　　　4、onmessage 当websocket接收到服务器发来的消息的时触发的事件，也是通信中最重要的一个监听事件
+```
+
+#### html25
+ > web storage和cookie的区别
+```html
+  1、Web Storage是为了更大容量存储设计的。 
+
+  2、Cookie 的大小是受限的，每次请求都会发送cookie，浪费带宽，另外`cookie`还需要指定作用域，不可以跨域调用。
+
+  3、Web Storage 拥有 setItem,getItem,removeItem,clear 等方法，
+    
+    cookie 需要前端开发者自己封装 setCookie，getCookie 。
+
+  4、cookie 的作用是与服务器进行交互，作为 HTTP 规范的一部分而存在 ，
+    
+    而 Web Storage 仅仅是为了在本地“存储”数据而生
+```
+
+#### html26
+ > cookie的优缺点
+ 每个特定的域名下最多生成20个cookie
+```html
+    1.IE6或更低版本最多20个cookie
+
+    2.IE7和之后的版本最后可以有50个cookie。
+
+    3.Firefox最多50个cookie
+
+    4.chrome和Safari没有做硬性限制
+```
+ `IE`和`Opera` 会清理近期最少使用的`cookie`，`Firefox`会随机清理`cookie`。
+
+ `cookie`的最大大约为4096字节，为了兼容性，一般不能超过4095字节。
+
+ `IE` 提供了一种存储可以持久化用户数据，叫做`userdata`，从IE5.0就开始支持。每个数据最多128K，每个域名下最多1M。
+ 这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。
+ > 优点：极高的扩展性和可用性
+```
+ 1.通过良好的编程，控制保存在cookie中的session对象的大小。
+
+ 2.通过加密和安全传输技术（SSL），减少cookie被破解的可能性。
+
+ 3.只在cookie中存放不敏感数据，即使被盗也不会有重大损失。
+
+ 4.控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。
+```
+ > 缺点：
+```
+ 1.Cookie 数量和长度的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉.
+ 
+ 2.安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。即使加密也与事无补，因为拦截者并不需要知道cookie的意义，他只要原样转发cookie就可以达到目的了。
+
+ 3.有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。
 ```
