@@ -22,6 +22,7 @@
 	* [对BFC的理解，BFC的触发条件都有哪些](#html19)
 	* [部分属性的百分比，是相对于什么的](#html20)
 	* [窗口和元素的各种宽高距离](#html21)
+	* [HTML5新增标签](#html22)
 * JAVASCRIPT
 * [常见兼容性问题]
  </br>
@@ -471,3 +472,51 @@ function getDocumentPort () {
  2. offsetLeft和offsetTop 相对于父元素的左上距离
  3. scrollTop和scrollLeft 滚动条被卷入的长度，也可以直接赋值使滚动条调到该位置
  ```
+ 
+#### html22
+```html
+一丶结构标签
+  （1）section：独立内容区块，可以用h1~h6组成大纲，表示文档结构，也可以有章节、页眉、页脚或页眉的其他部分；
+  （2）article：特殊独立区块，表示这篇页眉中的核心内容；
+  （3）aside：标签内容之外与标签内容相关的辅助信息；
+  （4）header：某个区块的头部信息/标题；
+  （5）hgroup：头部信息/标题的补充内容；
+  （6）footer：底部信息；
+  （7）nav：导航条部分信息
+  （8）figure：独立的单元，例如某个有图片与内容的新闻块。 
+
+二丶表单的type
+   （1）email：必须输入邮件；
+   （2）url：必须输入url地址；
+   （3）number：必须输入数值；
+   （4）range：必须输入一定范围内的数值；
+   （5）Date Pickers：日期选择器；
+      a.date：选取日、月、年
+      b.month：选取月、年
+      c.week：选取周和年
+      d.time：选取时间（小时和分钟）
+      e.datetime：选取时间、日、月、年（UTC时间）
+      f.datetime-local：选取时间、日、月、年（本地时间）
+   （6）search：搜索常规的文本域；
+   （7）color：颜色
+
+三丶媒体标签
+   （1）video：视频
+   （2）audio：音频
+   （3）embed：嵌入内容（包括各种媒体），Midi、Wav、AU、MP3、Flash、AIFF等。
+   （4）source：在video和audio中定义原文件路径
+四丶表单元素
+   （1）datalist 定义下拉列表，内部的项，用option标签
+   （2）keygen 用于表单的密钥对生成器字段
+   （3）output
+五丶其他标签
+   （1）mark：标注（像荧光笔做笔记）
+   （2）progress：进度条；<progress max="最大进度条的值" value="当前进度条的值">
+   （3）time：数据标签，给搜索引擎使用；发布日期<time datetime="2014-12-25T09:00">9：00</time>更新日期<time datetime="2015-
+01-23T04:00" pubdate>4:00</time>
+   （4）ruby和rt：对某一个字进行注释；<ruby><rt>注释内容</rt><rp>浏览器不支持时如何显示</rp></ruby>
+   （5）wbr：软换行，页面宽度到需要换行时换行；
+   （6）canvas：使用JS代码做内容进行图像绘制；
+   （7）command：按钮；
+   （8）deteils ：展开菜单；
+```
