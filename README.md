@@ -1004,13 +1004,13 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
 #### js12
  > slice() , subString() , subStr() 的比较
 ```javascript
-  1. slice 和 subString 的两个参数都是位置；
-     subStr 的两个参数分别是位置和项数
+  1. slice() 和 subString() 的两个参数都是位置；
+     subStr() 的两个参数分别是位置和项数
     
-  2. slice参数有负数 ： 都会加上length变为正数；
-     subString参数有负数 ： 第一个参数加上length来变为正数 ， 第二个参数直接当做0
-     subStr参数有负数 ： 两个参数都当做0
+  2. slice()参数有负数 ： 都会加上length变为正数；
+     subString()参数有负数 ： 第一个参数加上length来变为正数 ， 第二个参数直接当做0
+     subStr()参数有负数 ： 两个参数都当做0
     
-  3. slice第一个参数大于第二个参数 ， 结果为空串""
-     subString第一个参数大于第二个参数 ， 如(2,1),会当做(1,2)来进行计算
+  3. slice()第一个参数大于第二个参数 ， 结果为空串""
+     subString()第一个参数大于第二个参数 ， 如(2,1),会当做(1,2)来进行计算
 ```
