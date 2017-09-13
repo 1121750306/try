@@ -45,6 +45,7 @@
 	* [ call() , apply() , bind()](#js9)
 	* [闭包的特性，理解](#js10)
 	* [正则对象的exec方法和string对象的match方法](#js10)
+	* [slice() , subString() , subStr() 的比较](#js11)
 * [常见兼容性问题]
  </br>
 
@@ -980,9 +981,9 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
 #### js11
 > 正则对象的exec方法和string对象的match方法
 ```javascript
-1.reg.exec(),只会返回第一个匹配到的串，所以正则对象的gim对其无效
-  string.match()，会根据正则表达式中的gim等，查询到所有结果
-2.在正则表达式有匹配组的情况下
+1. reg.exec(),只会返回第一个匹配到的串，所以正则对象的gim对其无效
+   string.match()，会根据正则表达式中的gim等，查询到所有结果
+2. 在正则表达式有匹配组的情况下
     reg.exec()返回第一个匹配到的串，并且返回数组之后会保存每个匹配组的值
     string.match()在只有一个匹配字符串的情况下，返回值与exec一样
     
@@ -994,8 +995,22 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
     string.match()在有多个匹配结果的情况下，不会保存匹配组的值
     
     var str= "cat,hat" ;
-    var p=/a(t)/g; //注意g属性
-    alert(p.exec(str))     //"at,t"
+    var p=/a(t)/g; // g:全局 ， i:忽略大小写 ， m:多行
+    alert(p.exec(str))     //"at,t"
     alert(str.match(p))    //"at,at"
 
+```
+
+#### js12
+ > slice() , subString() , subStr() 的比较
+```javascript
+  1. slice 和 subString 的两个参数都是位置；
+     subStr 的两个参数分别是位置和项数
+    
+  2. slice参数有负数 ： 都会加上length变为正数；
+     subString参数有负数 ： 第一个参数加上length来变为正数 ， 第二个参数直接当做0
+     subStr参数有负数 ： 两个参数都当做0
+    
+  3. slice第一个参数大于第二个参数 ， 结果为空串""
+     subString第一个参数大于第二个参数 ， 如(2,1),会当做(1,2)来进行计算
 ```
