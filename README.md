@@ -44,6 +44,7 @@
 	* [两种立即执行函数的区别](#js8)
 	* [ call() , apply() , bind()](#js9)
 	* [闭包的特性，理解](#js10)
+	* [正则对象的exec方法和string对象的match方法](#js10)
 * [常见兼容性问题]
  </br>
 
@@ -974,4 +975,27 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
    会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念
    
    https://segmentfault.com/a/1190000000652891
+```
+
+#### js11
+> 正则对象的exec方法和string对象的match方法
+```javascript
+1.reg.exec(),只会返回第一个匹配到的串，所以正则对象的gim对其无效
+  string.match()，会根据正则表达式中的gim等，查询到所有结果
+2.在正则表达式有匹配组的情况下
+    reg.exec()返回第一个匹配到的串，并且返回数组之后会保存每个匹配组的值
+    string.match()在只有一个匹配字符串的情况下，返回值与exec一样
+    
+    var str= "cat2,hat8" ;
+    var p=/c(at)\d/;
+    alert(p.exec(str))
+    alert(str.match(p))    //结果都为"cat,at"
+
+    string.match()在有多个匹配结果的情况下，不会保存匹配组的值
+    
+    var str= "cat,hat" ;
+    var p=/a(t)/g; //注意g属性
+    alert(p.exec(str))     //"at,t"
+    alert(str.match(p))    //"at,at"
+
 ```
