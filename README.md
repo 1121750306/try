@@ -50,6 +50,7 @@
 	* [函数赋值的默认值与解构赋值默认值](#es6_1)
 	* [函数的rest操作和数组的扩展运算](#es6_2)
 	* [Array.form()方法将类似数组的对象转为对象](#es6_3)
+	* [简介表达式和属性名表达式](#es6_4)
 * [常见兼容性问题]
  </br>
 
@@ -1084,4 +1085,29 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
  es6:
  var arr = Array.form(arguments)
  
+ ```
+#### es6_4
+ > 简介表达式和属性名表达式
+ ```JavaScript
+ 简介表达式： 直接写入变量和函数，作为对象的属性和方法
+ 	const foo = 'bar';
+	const baz = {foo};
+	baz // {foo: "bar"}
+属性名表达式：
+	let propKey = 'foo';
+
+	let obj = {
+ 	 [propKey]: true,
+	 ['a' + 'bc']: 123
+	};
+	
+注意：属性名表达式与简介表达式不能同时使用
+// 报错
+const foo = 'bar';
+const bar = 'abc';
+const baz = { [foo] };
+
+// 正确
+const foo = 'bar';
+const baz = { [foo]: 'abc'};
  ```
