@@ -1127,9 +1127,9 @@ Object.is(NaN, NaN) // true
  ```
 
 #### es6_6
- > Object.assign()对象的合并
+ > Object.assign()对象的合并   ( 浅拷贝 )  
  ```javascript
- Object.assign()第一个参数为目标对象，后面可以跟其他的对象
+ Object.assign()第一个参数为目标对象，后面可以跟其他的对象  ,同名属性后面的会覆盖前面的
  
  目标对象不是对象时：
  null和undefined会报错，其他类型会转为对象
