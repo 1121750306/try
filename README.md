@@ -51,6 +51,8 @@
 	* [函数的rest操作和数组的扩展运算](#es6_2)
 	* [Array.form()方法将类似数组的对象转为对象](#es6_3)
 	* [简介表达式和属性名表达式](#es6_4)
+	* [Object.is( , )比较是否相等](#es6_5)
+	* [Object.assign()对象的合并](#es6_6)
 * [常见兼容性问题]
  </br>
 
@@ -1075,7 +1077,7 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
 // [ "h", "e", "l", "l", "o" ]
  ```
 #### es6_3
- > Array.form()方法将类似数组的对象转为对象
+ > Array.form()方法将类似数组的对象转为数组
  ```javascript
  arguments和querySelectorAll方法等nodeLIst获取的结果都是类似数组的对象
  有的时候需要将其转为数组
@@ -1093,7 +1095,7 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
  	const foo = 'bar';
 	const baz = {foo};
 	baz // {foo: "bar"}
-属性名表达式：
+属性名表达式：  // 若属性名表达式的值是一个对象，他会自动转为字符串
 	let propKey = 'foo';
 
 	let obj = {
@@ -1110,4 +1112,33 @@ const baz = { [foo] };
 // 正确
 const foo = 'bar';
 const baz = { [foo]: 'abc'};
+ ```
+
+#### es6_5
+ > Object.is( , )比较是否相等
+ ```
+ Object.is是一个真实的  “ 同值相等”
+ 和 === 差不多，不同在于：
+ +0 === -0 //true
+NaN === NaN // false
+
+Object.is(+0, -0) // false
+Object.is(NaN, NaN) // true
+ ```
+
+#### es6_6
+ > Object.assign()对象的合并
+ ```javascript
+ Object.assign()第一个参数为目标对象，后面可以跟其他的对象
+ 
+ 目标对象不是对象时：
+ null和undefined会报错，其他类型会转为对象
+ 
+ 非首参数 不是对象时：
+ 	null和undefined不会报错，但是会跳过
+	布尔值、数值、字符串分别转成对应的包装对象，布尔值和数值在包装对象的内部属性[[PrimitiveValue]]上面，不会被拷贝，
+只有字符串会产生可枚举属性，即： Object.assign({},1,2,3,"abc")   // {0:a,1:b,2:c}
+/*	Object(true) // {[[PrimitiveValue]]: true}
+	Object(10)  //  {[[PrimitiveValue]]: 10}
+	Object('abc') // {0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"}*/
  ```
