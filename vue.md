@@ -28,10 +28,10 @@
  methods明明可以完成computed的任务，那conputed存在的价值在哪：
   计算属性基于它们的依赖进行缓存的。计算属性只有在它的相关依赖发生改变时才会重新求值
   即： 如计算属性依赖与data的size，则conputed只有在size改变时才会重新计算，而methods每次调用都会计算
-	
-computed: {
-  now: function () {
-    return Date.now()
-  }
-}
+  下面代码的Date.now不是响应式依赖，所以也只会计算一次
+	computed: {
+  	now: function () {
+    	return Date.now()
+  	}
+	}
 ```
