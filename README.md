@@ -32,6 +32,7 @@
 	* [script标签的defer、async的区别](#html30)
 	* [HTML5 应用程序缓存和浏览器缓存有什么区别](#html31)
 	* [常见浏览器兼容性问题与解决方案](#html32)
+	* [word-break 和 word-wrap 以及 white-space](#html33)
 * JAVASCRIPT
 	* [数据类型 , typeof](#js1)
 	* [与或非操作符 ， == 的强制转换类型规则](#js2)
@@ -759,6 +760,21 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
 一般在ie中用的是filter:alpha(opacity=0);这个属性来设置div或者是块级元素的透明度，而在firefox中，一般就是直接使用opacity:0,对于兼容的，一般的做法就是在书写css样式的将2个都写上就行，就能实现兼容
 ```
 
+#### html33
+ > word-break 和 word-wrap
+ ```
+ 1.	word-break 当行尾放不下一个单词时，决定单词内部该怎么摆放。 
+	break-all: 强行上，挤不下的话剩下的就换下一行显示呗。霸道型。 
+	keep-all: 放不下我了，那我就另起一行展示，再放不下，我也不退缩。傲骄型。
+ 2. word-wrap 当行尾放不下时，决定单词内是否允许换行 
+	normal: 单词太长，换行显示，再超过一行就溢出显示。 
+	break-word: 当单词太长时，先尝试换行，换行后还是太长，单词内还可以换行。
+ 3. white-space: normal | nowrap | pre | pre-wrap | pre-line 
+	我们重点关注pre开头的几个属性。pre是preserve(保留)的缩写。没错，它就跟保留空格有关系
+	pre: 保留所有的空格和回车，且不允许折行。 
+	pre-wrap: 保留所有的空格和回车，但是允许折行。 
+	pre-line: 会合并空格，且允许折行
+ ```
 
 # JavaScript
 
