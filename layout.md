@@ -2,7 +2,9 @@
 ```css
         .wrap {
             width: 960px;
+            padding: 0 200px;
             margin: 0 auto;
+            box-sizing: border-box;
         }
         .wrap div {
             height: 600px;
