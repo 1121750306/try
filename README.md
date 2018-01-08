@@ -981,7 +981,8 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
    function.call(this,1,2,3);
    
    bind()只有一个参数，即上下文，其返回值就是改变呢上下文的原函数，不包括运行的步骤
-   ---bind(this)(1,2,3)  彩盒之前两种效果相同
+   ---bind(this)(1,2,3)  才与之前两种效果相同     但是：：：
+   
    Function.prototype.bind = function(context, ...args){
    	return function(...args2) {
 		this.apply(context, [...args, ...args2])
