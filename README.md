@@ -982,6 +982,14 @@ iframe和主页面共享连接池，而浏览器对相同域的连接有限制�
    
    bind()只有一个参数，即上下文，其返回值就是改变呢上下文的原函数，不包括运行的步骤
    ---bind(this)(1,2,3)  彩盒之前两种效果相同
+   Function.prototype.bind = function(context, ...args){
+   	return function(...args2) {
+		this.apply(context, [...args, ...args2])
+	}
+   }
+   此处在一般函数调用bind时影响不大，不过在类似点击事件的触发函数时：
+   on-click=func.bind(func, data);
+   此处的func自带一个参数event，即args2为[event],而args为[data]，即最后传入的参数为(data, event)
 ```
 
 #### js10
