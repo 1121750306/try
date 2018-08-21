@@ -433,6 +433,13 @@ lang(language)
 
     W3C CSS 2.1 规范中的一个概念，它决定了元素如何对其内容进行布局，以及与其他元素的关系和相互作用。
    ```
+   > 常用场景
+   ```
+   1. 子元素存在浮动，父元素无法控制他/包裹他
+      将父元素设置为BFC即可。常见的overflow hidden同样的结果
+   2. 同一个div下，两个div为兄弟节点，第一个div杯设置为浮动(left)之后，第二个元素和第一个元素重合了
+      将第二个元素设置为BFC，可以补充和，效果为第二个元素挨着第一个元素排列，视觉效果和第二元素也是float left一样，但是能撑开父元素高度
+   ```
    
  > 哪些可以触发BFC
  ```css
@@ -444,6 +451,8 @@ lang(language)
     display: inline-block;
     position: fixed;
     position: absolute;
+    弹性元素
+    网格元素
     ……
  ```
 
