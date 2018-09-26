@@ -25,11 +25,11 @@
 
 ```
   比如：
-    created: () => console.log(this.a) 
-    vm.$watch('a', newValue => this.myMethod())
-    因为箭头函数是和父级上下文绑定在一起的，this 不会是如你所预期的 Vue 实例，
-    经常导致 Uncaught TypeError: Cannot read property of undefined 
-      或 Uncaught TypeError: this.myMethod is not a function 之类的错误
+  created: () => console.log(this.a) 
+  vm.$watch('a', newValue => this.myMethod())
+  因为箭头函数是和父级上下文绑定在一起的，this 不会是如你所预期的 Vue 实例，
+  经常导致 Uncaught TypeError: Cannot read property of undefined 
+	或 Uncaught TypeError: this.myMethod is not a function 之类的错误
 ```
 
 > 组件和混合对象合并规则
@@ -58,6 +58,7 @@
 ```
 
  > 数值的传递
+ 
  ```
  	<comp some-prop="1"></comp>
 	此处传递的1是字符串，若需要传递数值的1,需要加上v-model进行绑定
