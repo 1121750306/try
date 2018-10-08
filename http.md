@@ -42,5 +42,27 @@ http本身是无状态协议，它自身不保存请求和响应之间的通信�
   
   * 206 Partial Content 表示进行了范围请求
 * 3XX  Redirection  需要进行附加操作以完成请求
+  
+  * 301 Moved Permanently 永久性重定向，请求的资源已被分配了新的URI，以后应使用新的URI
+  
+  * 302 Found 临时性重定向，请求资源已被分配新的URI，希望本次能够使用新的URI，标准禁止讲post转为get，但是大家都会转
+  
+  * 303 See Other 请求资源存在另一个URI，应使用get请求定向获取请求资源
+  
+  * 304 Not Modified 客户端发送带有条件的请求，客户端允许访问资源，但是资源未满足条件，所以返回304，服务端资源未发生变化可使用未过期的缓存也用304
+  
+  * 307 Temporary Redirect 临时重定向，和302含义相同，但是307遵守浏览器规则，不会从post转为get
 * 4XX  Client Error  服务器无法处理请求
+  
+  * 400 Bad Request 请求报文存在语法错误，需修改请求内容后再次发生。（浏览器对待该状态码会像200一样）
+  
+  * 401 Unauthorized 未经过认证，表示发送的请求需要有通过http认证（basic、digest）的认证信息。若之前已进行过一次请求，则表示认证失败
+  
+  * 403 Forbidden 服务器禁止客户端访问该资源，明确拒绝，未授权等情况都可能是403
+  
+  * 404 Not Found 服务器不存在该资源，也可以在服务器拒绝请求且不说明理由的情况使用
 * 5XX  Server Error  服务器处理请求错误
+  
+  * 500 Internal Server Error 服务器内部在执行请求时发生错误
+  
+  * 503 Service Unavailable 服务器处于超负载或停机维护，无法处理请求
