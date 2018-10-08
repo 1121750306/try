@@ -36,11 +36,11 @@ http本身是无状态协议，它自身不保存请求和响应之间的通信�
 * 1XX  Informational  请求正在处理
 * 2XX  Success  请求正常处理完毕
 
-  200 OK 请求正常处理
+  * 200 OK 请求正常处理
   
-  204 No Content 请求处理成功，但是返回的响应报文实体中无主体部分，也不允许返回任何实体的主体。（多用在服务器不需要想客户端返回内容）
+  * 204 No Content 请求处理成功，但是返回的响应报文实体中无主体部分，也不允许返回任何实体的主体。（多用在服务器不需要想客户端返回内容）
   
-  206 Partial Content 表示进行了范围请求
+  * 206 Partial Content 表示进行了范围请求
 * 3XX  Redirection  需要进行附加操作以完成请求
 * 4XX  Client Error  服务器无法处理请求
 * 5XX  Server Error  服务器处理请求错误
