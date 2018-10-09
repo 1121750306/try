@@ -25,23 +25,23 @@ http本身是无状态协议，它自身不保存请求和响应之间的通信�
 
 1. 缓存处理
 
-  在http1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，http1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略
+    在http1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，http1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略
   
 2. 带宽优化及网络连接的使用
 
-  http1.0中，存在一些浪费带宽的现象，例如http1.0不支持范围请求，在http1.1中就支持设置range来请求部分资源，即返回码为206，http1.0也就不支持断点续传功能了。http1.1支持只发送header而不发送body的请求
+    http1.0中，存在一些浪费带宽的现象，例如http1.0不支持范围请求，在http1.1中就支持设置range来请求部分资源，即返回码为206，http1.0也就不支持断点续传功能了。http1.1支持只发送header而不发送body的请求
   
 3. 错误通知管理
 
-  http1.1新增了24个（持续）错误状态码，更清晰地告诉客户端错误原因
+    http1.1新增了24个（持续）错误状态码，更清晰地告诉客户端错误原因
   
 4. host头部处理
 
-  http1.0认为一台服务器的IP是唯一的，所以没有host域/主机名hostname这个参数，但是现在可以通过配置多个虚拟主机来共享一个IP，所以需要hostname来找到具体主机，而且http1.1在没有host头域的情况下会报错400
+    http1.0认为一台服务器的IP是唯一的，所以没有host域/主机名hostname这个参数，但是现在可以通过配置多个虚拟主机来共享一个IP，所以需要hostname来找到具体主机，而且http1.1在没有host头域的情况下会报错400
   
 5. 长连接
 
-  http1.0每一次http请求都需要进行tcp连接和断开，浪费tcp的资源带宽，http1.1支持keep-alive来实现长连接，达到一次tcp的连接可以进行多个http请求
+    http1.0每一次http请求都需要进行tcp连接和断开，浪费tcp的资源带宽，http1.1支持keep-alive来实现长连接，达到一次tcp的连接可以进行多个http请求
 
 > 持久化连接
 
