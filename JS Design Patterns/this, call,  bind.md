@@ -13,5 +13,16 @@
 4. Function.prototype.call 或 Function.prototype.apply 调用
   call，apply等，改变了this的指向，指向了传入的第一个参数
   
-14
+#### call,apply的用途
+1. 改变this的指向
+2. 实现bind方法
+```JavaScript
+  Function.prototype.bind = function(content) {
+    let self = this;
+    return self.apply(content, arguments)
+  }
+```
 
+3. 借用其他对象的方法
+  * 借用构造函数调用
+  * Array.prototype.push.apply(DOM, newDom)
