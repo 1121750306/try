@@ -2,6 +2,8 @@
 2. git rebase -i HEAD~3 进入合并操作的vim界面 
 
   HEAD~3表示将最近三次commit的修改合并到第一次的commit中
+
+3. 按 a, i 或 o 进入编辑模式, 按 ESC 进入操作模式, 在操作模式下，:wq 为写入退出，:q! 不保存退出  
 >pick：保留该commit（缩写:p）
 
 >reword：保留该commit，但我需要修改该commit的注释（缩写:r）
