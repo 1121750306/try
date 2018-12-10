@@ -275,6 +275,6 @@ function mergeData (to: Object, from: ?Object): Object {
 ```
 to为childVal，from为parentVal
 大体思路：
-没有parent，直接返回child
-有parent，遍历parent，如果child没有就直接set，
-如果有child，如果都是对象，递归调用mergeData，不是对象以child为准
+* 没有parent，直接返回child
+* 有parent，遍历parent，如果child没有就直接set，
+* 如果有child，如果都是对象，递归调用mergeData，不是对象以child为准
