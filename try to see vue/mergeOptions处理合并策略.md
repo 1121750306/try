@@ -165,3 +165,116 @@ function mergeHook (
 流畅图如下 
 
 ![钩子函数合并策略mergehook](https://github.com/1121750306/try/blob/master/imgLIst/%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%90%88%E5%B9%B6%E7%AD%96%E7%95%A5mergehook.png?raw=true)
+
+2. props,methods,inject,computed 的合并
+```javascript
+strats.props =
+strats.methods =
+strats.inject =
+strats.computed = function (
+  parentVal: ?Object,
+  childVal: ?Object,
+  vm?: Component,
+  key: string
+): ?Object {
+  if (childVal && process.env.NODE_ENV !== 'production') {
+    assertObjectType(key, childVal, vm) // 校验是否是对象的方法
+  }
+  if (!parentVal) return childVal
+  const ret = Object.create(null)
+  extend(ret, parentVal)
+  if (childVal) extend(ret, childVal)
+  // 合并并生成新的对象
+  return ret
+}
+```
+流程和钩子函数合并类似，只是处理父子合并的时候不同，此处是使用继承的方式，同名属性使用childVal中的值
+
+3. components,directives,filters 的合并
+```javascript
+function mergeAssets (
+  parentVal: ?Object,
+  childVal: ?Object,
+  vm?: Component,
+  key: string
+): Object {
+  const res = Object.create(parentVal || null)
+  if (childVal) {
+    process.env.NODE_ENV !== 'production' && assertObjectType(key, childVal, vm)
+    return extend(res, childVal)
+  } else {
+    return res
+  }
+}
+```
+逻辑同上
+
+4. data,computed的合并
+```javascript
+export function mergeDataOrFn (
+  parentVal: any,
+  childVal: any,
+  vm?: Component
+): ?Function {
+  if (!vm) { // 如果调用mergeOptions操作的不是vm实例，一般通过Vue.extend或者Vue.component调用
+    // in a Vue.extend merge, both should be functions
+    if (!childVal) {
+      return parentVal
+    }
+    if (!parentVal) {
+      return childVal
+    }
+    // when parentVal & childVal are both present,
+    // we need to return a function that returns the
+    // merged result of both functions... no need to
+    // check if parentVal is a function here because
+    // it has to be a function to pass previous merges.
+    // 下面的操作目的，都是想要封装返回为函数
+    return function mergedDataFn () {
+      return mergeData(
+        typeof childVal === 'function' ? childVal.call(this, this) : childVal,
+        typeof parentVal === 'function' ? parentVal.call(this, this) : parentVal
+      )
+    }
+  } else { // 调用mergeOptions操作的是vm实例，一般通过new Vue来创建调用
+    return function mergedInstanceDataFn () {
+      // instance merge
+      const instanceData = typeof childVal === 'function'
+        ? childVal.call(vm, vm)
+        : childVal
+      const defaultData = typeof parentVal === 'function'
+        ? parentVal.call(vm, vm)
+        : parentVal
+      if (instanceData) {
+        return mergeData(instanceData, defaultData)
+      } else {
+        return defaultData
+      }
+    }
+  }
+}
+```
+上面代码的最后，都会调用mergeData，下面是mergeData内容：
+```javascript
+function mergeData (to: Object, from: ?Object): Object {
+  if (!from) return to
+  let key, toVal, fromVal
+  const keys = Object.keys(from)
+  for (let i = 0; i < keys.length; i++) {
+    key = keys[i]
+    toVal = to[key]
+    fromVal = from[key]
+    if (!hasOwn(to, key)) {
+      set(to, key, fromVal)
+    } else if (isPlainObject(toVal) && isPlainObject(fromVal)) {
+      mergeData(toVal, fromVal)
+    }
+  }
+  return to
+}
+```
+to为childVal，from为parentVal
+大体思路：
+没有parent，直接返回child
+有parent，遍历parent，如果child没有就直接set，
+如果有child，如果都是对象，递归调用mergeData，不是对象以child为准
