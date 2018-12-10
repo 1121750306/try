@@ -163,4 +163,5 @@ function mergeHook (
 
 ```
 流畅图如下 
+
 ![钩子函数合并策略mergehook](https://github.com/1121750306/try/blob/master/imgLIst/%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%90%88%E5%B9%B6%E7%AD%96%E7%95%A5mergehook.png?raw=true)
