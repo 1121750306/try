@@ -1,4 +1,13 @@
-### unable to load script from assets 'index.android bundle' ,make sure your bundle is packaged correct
+### 1.运行项目
+1. react-native init AwesomeProject初始化目录
+2. react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+   运行命令将react-native打包到android目录
+3. react-native run-android 安卓执行命令
+4. 重复2.3操作
+
+
+
+### 2.unable to load script from assets 'index.android bundle' ,make sure your bundle is packaged correct
 
 1. 在 android/app/src/main 目录下创建一个 assets空文件夹
 2. 项目根目录运行：
