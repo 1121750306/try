@@ -7,6 +7,8 @@ react-native bundle --platform android --dev false --entry-file index.js --bundl
 ```
 注意，是编译index.js而不是index.android.js
 react-native新版本已经没有index.android.js和index.ios.js两个文件了，只有一个index.js文件,所以要编译index.js 
+
 会发现 assets文件夹下多出两个文件
 index.android.bundle index.android.bundle.meta
+
 3. 重新react-native run-android
