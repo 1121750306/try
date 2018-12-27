@@ -5,6 +5,7 @@
 3. react-native run-android 安卓执行命令
 4. 重复2.3操作
 
+或者运行npm start，此时安卓端摇晃手机打开菜单设置配置pc的ip和端口后，reloadjs 可直接更新js。修改了安卓配置则需要重启项目
 
 
 ### 2.unable to load script from assets 'index.android bundle' ,make sure your bundle is packaged correct
